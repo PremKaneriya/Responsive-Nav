@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/submenu.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+        <a href="#">logo</a>
+        <nav>
+            <i class="fa-solid fa-ellipsis" onclick="toggleMenu()" ></i>
+            <ul id="menu">
+                <i class="fa-solid fa-circle-xmark" onclick="toggleMenu()"></i>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">Products <i class="fa-solid fa-chevron-right"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Electronic</a></li>
+                        <li>
+                            <a href="#">Fashion <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="subsubmenu">
+                                <li><a href="#">Men's</a></li>
+                                <li><a href="#">Women's</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Books</a></li>
+                        <li><a href="#">Toys</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+
+    <script>
+
+        function toggleMenu() {
+        
+        document.getElementById("menu").classList.toggle('showHide')
+        
+        }
+        
+        </script>
+</body>
+</html>

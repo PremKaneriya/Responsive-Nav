@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+    position: relative;
+
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header .container > nav > ul {
+    display: flex;
+}
+
+nav > ul > li {
+    position: relative;
+}
+
+header .container > nav > ul > li > a {
+    padding: 20px;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+header .container > nav > ul a:hover {
+    color: white;
+    background-color: black;
+    transition: all 0.3s;
+}
+
+.submenu {
+    position: absolute;
+    top: 57px;
+    left: 0;
+    width: 110px;
+    display: none;
+}
+
+.submenu a {
+    display: inline-block;
+    padding: 16px;
+    font-size: 16px;
+    color: black;
+    background-color: grey;    
+    width:100%;
+}
+
+
+.subsubmenu {
+    position: absolute;
+    left: 110px;
+    top: 0;
+    width: 100%;
+    display: none;
+}
+
+.subsubmenu a {
+    display: inline-block;
+    padding: 16px;
+    font-size: 16px;
+    color: black;
+    background-color: grey;    
+    width:100%;
+}
+
+.submenu li {
+    position: relative;
+}
+
+nav ul li:hover .submenu, .submenu li:hover .subsubmenu {
+    display: inline-block;
+}
+
+nav > ul > li > a:hover i ,.submenu > li:hover a > i{
+    transform: rotate(90deg);
+}
+
+.fa-ellipsis, .fa-circle-xmark {
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+
+    nav > ul {
+        position: absolute;
+        height: 100vh;
+        width: 40%;
+        background-color: aqua;
+        top: 0;
+        right: -60%;
+        transition: all 0.5s;
+    }
+
+    header > .container > nav > ul {
+        display: block;
+    }
+
+    .submenu {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .subsubmenu {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    header > .container > nav > ul > li a {
+        width: 100%;
+    }
+
+    .submenu a {
+        padding-left: 50px;
+    }
+    
+    .subsubmenu a {
+        padding-left: 90px;
+    }
+
+    header {
+        height: 50px;
+    }
+
+    .showHide {
+        right: 0;
+    }
+
+    nav > i {
+        font-size: 30px;
+        margin-top: 8px;
+    }
+
+    #menu > i {
+        font-size: 30px;
+        float: right;
+        position: relative;
+        z-index: 999;
+        padding: 10px 10px;
+    }   
+
+    .fa-ellipsis, .fa-circle-xmark {
+        display: block;
+    }   
+
+}
